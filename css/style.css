@@ -78,6 +78,7 @@ main {
   position: absolute;
   top: 22px;
   right: 28px;
+  cursor: pointer;
 }
 .accordeon .blocks.block2 .fleche, .accordeon .blocks.block3 .fleche, .accordeon .blocks.block4 .fleche {
   top: 42px;
