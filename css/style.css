@@ -79,6 +79,9 @@ main {
   top: 22px;
   right: 28px;
 }
+.accordeon .blocks.block2 .fleche, .accordeon .blocks.block3 .fleche, .accordeon .blocks.block4 .fleche {
+  top: 42px;
+}
 .accordeon .blocks h2 {
   font-family: "Roboto";
   font-style: normal;
