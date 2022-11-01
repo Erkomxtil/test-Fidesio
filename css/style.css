@@ -79,6 +79,11 @@ main {
   top: 22px;
   right: 28px;
   cursor: pointer;
+  rotate: 0deg;
+  transition: rotate 0.3s ease;
+}
+.accordeon .blocks .fleche:hover {
+  rotate: 135deg;
 }
 .accordeon .blocks.block2 .fleche, .accordeon .blocks.block3 .fleche, .accordeon .blocks.block4 .fleche {
   top: 42px;
@@ -133,8 +138,31 @@ main {
 }
 .accordeon .blockWrapper.open {
   display: block;
+  -webkit-animation: heightBlock 0.5s ease-in;
+          animation: heightBlock 0.5s ease-in;
 }
 
+@-webkit-keyframes heightBlock {
+  from {
+    max-height: 0%;
+    opacity: 0;
+  }
+  to {
+    max-height: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes heightBlock {
+  from {
+    max-height: 0%;
+    opacity: 0;
+  }
+  to {
+    max-height: 100%;
+    opacity: 1;
+  }
+}
 .partenaires {
   display: flex;
   justify-content: space-between;
@@ -213,6 +241,9 @@ main {
   padding: 2px 12px;
   margin-right: 22px;
 }
+.articles .articlesWrapper article.news1 img:hover {
+  opacity: 0.7;
+}
 .articles .articlesWrapper article.news2 h2 {
   padding-top: 30px;
 }
@@ -221,6 +252,9 @@ main {
 }
 .articles .articlesWrapper article.news3 img {
   max-width: 276px;
+}
+.articles .articlesWrapper article.news3 img:hover {
+  opacity: 0.7;
 }
 .articles .articlesWrapper article.news3 h2 {
   font-style: normal;
