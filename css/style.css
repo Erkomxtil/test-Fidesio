@@ -121,7 +121,6 @@ main {
 }
 .accordeon .block1 .blockWrapper {
   height: auto;
-  transition: height 1s;
 }
 .accordeon .block2 {
   background-color: #0777C2;
@@ -130,7 +129,6 @@ main {
 }
 .accordeon .block2 .blockWrapper {
   display: none;
-  transition: height 1s;
 }
 .accordeon .block3 {
   background-color: #EF8451;
@@ -139,7 +137,6 @@ main {
 }
 .accordeon .block3 .blockWrapper {
   display: none;
-  transition: height 1s;
 }
 .accordeon .block4 {
   background-color: #EA6419;
@@ -148,11 +145,12 @@ main {
 }
 .accordeon .block4 .blockWrapper {
   display: none;
-  transition: height 1s;
 }
 .accordeon .blockWrapper {
-  height: 0;
-  transition: height 1s;
+  display: none;
+}
+.accordeon .blockWrapper.open {
+  display: block;
 }
 
 .partenaires {
