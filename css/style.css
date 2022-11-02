@@ -65,6 +65,7 @@ main {
   padding: 40px 40px 0px 40px;
   color: #ffffff;
   position: relative;
+  overflow: hidden;
 }
 .accordeon .blocks h1 {
   font-family: "Roboto";
@@ -118,51 +119,42 @@ main {
   background: #1184D1 url("../images/cercle.png") no-repeat center;
   z-index: 10;
 }
+.accordeon .block1 .blockWrapper {
+  height: auto;
+  transition: height 1s;
+}
 .accordeon .block2 {
   background-color: #0777C2;
   margin-top: -20px;
   z-index: 9;
+}
+.accordeon .block2 .blockWrapper {
+  display: none;
+  transition: height 1s;
 }
 .accordeon .block3 {
   background-color: #EF8451;
   margin-top: -20px;
   z-index: 8;
 }
+.accordeon .block3 .blockWrapper {
+  display: none;
+  transition: height 1s;
+}
 .accordeon .block4 {
   background-color: #EA6419;
   margin-top: -20px;
   z-index: 7;
 }
-.accordeon .blockWrapper {
+.accordeon .block4 .blockWrapper {
   display: none;
+  transition: height 1s;
 }
-.accordeon .blockWrapper.open {
-  display: block;
-  -webkit-animation: heightBlock 0.5s ease-in;
-          animation: heightBlock 0.5s ease-in;
-}
-
-@-webkit-keyframes heightBlock {
-  from {
-    max-height: 0%;
-    opacity: 0;
-  }
-  to {
-    max-height: 100%;
-    opacity: 1;
-  }
+.accordeon .blockWrapper {
+  height: 0;
+  transition: height 1s;
 }
 
-@keyframes heightBlock {
-  from {
-    max-height: 0%;
-    opacity: 0;
-  }
-  to {
-    max-height: 100%;
-    opacity: 1;
-  }
-}
 .partenaires {
   display: flex;
   justify-content: space-between;
@@ -240,6 +232,10 @@ main {
   border-radius: 20px;
   padding: 2px 12px;
   margin-right: 22px;
+  cursor: pointer;
+}
+.articles .articlesWrapper article p.audi span:hover {
+  background-color: #EA6419;
 }
 .articles .articlesWrapper article.news1 img:hover {
   opacity: 0.7;
